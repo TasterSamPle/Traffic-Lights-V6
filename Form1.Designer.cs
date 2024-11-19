@@ -29,39 +29,41 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            pictureBox1 = new PictureBox();
-            timer1 = new System.Windows.Forms.Timer(components);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pb_area = new PictureBox();
+            tmr_state = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)pb_area).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pb_area
             // 
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(695, 438);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pb_area.Location = new Point(0, 0);
+            pb_area.Name = "pb_area";
+            pb_area.Size = new Size(695, 438);
+            pb_area.TabIndex = 0;
+            pb_area.TabStop = false;
+            pb_area.Paint += pb_area_Paint;
             // 
-            // timer1
+            // tmr_state
             // 
-            timer1.Enabled = true;
-            timer1.Interval = 4000;
+            tmr_state.Enabled = true;
+            tmr_state.Interval = 4000;
+            tmr_state.Tick += tmr_state_Tick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            Controls.Add(pb_area);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pb_area).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
+        private PictureBox pb_area;
+        private System.Windows.Forms.Timer tmr_state;
     }
 }
