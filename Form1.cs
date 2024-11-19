@@ -10,7 +10,7 @@ namespace Traffic_Lights_V6
         public Form1()
         {
             _lamp = new Lamp(Color.Red, 10, 10);
-            
+
             _trafficLight = new TrafficLight(210, 10);
             _trafficLight2 = new TrafficLight2(420, 10);
 
@@ -36,7 +36,7 @@ namespace Traffic_Lights_V6
             Graphics g = e.Graphics;
 
             // Display all 3 objects
-  
+
 
             _trafficLight.Display(g);
             _trafficLight2.Display(g);
