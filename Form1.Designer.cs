@@ -46,7 +46,7 @@
             // tmr_state
             // 
             tmr_state.Enabled = true;
-            tmr_state.Interval = 4000;
+            tmr_state.Interval = 500;
             tmr_state.Tick += tmr_state_Tick;
             // 
             // Form1

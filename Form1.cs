@@ -20,7 +20,7 @@ namespace Traffic_Lights_V6
         {
 
             _lamp.ChangeState();
-            
+
             _trafficLight.ChangeState();
 
 
@@ -35,7 +35,7 @@ namespace Traffic_Lights_V6
 
             // Display all 3 objects
             _lamp.Display(g);
-            
+
             _trafficLight.Display(g);
         }
     }

@@ -30,28 +30,28 @@ namespace Traffic_Lights_V6
                     _redLamp.ChangeState(true);
                     _amberLamp.ChangeState(false);
                     _greenLamp.ChangeState(false);
-                    _state = State.Green;
+                    _state = State.RedAmber;
                     break;
 
                 case State.RedAmber:
                     _redLamp.ChangeState(true);
                     _amberLamp.ChangeState(true);
                     _greenLamp.ChangeState(false);
-                    _state = State.Red;
+                    _state = State.Green;
                     break;
 
                 case State.Green:
                     _redLamp.ChangeState(false);
                     _amberLamp.ChangeState(false);
                     _greenLamp.ChangeState(true);
-                    _state = State.Green;
+                    _state = State.Amber;
                     break;
 
                 case State.Amber:
                     _redLamp.ChangeState(false);
                     _amberLamp.ChangeState(true);
                     _greenLamp.ChangeState(false);
-                    _state = State.Amber;
+                    _state = State.Red;
                     break;
                     
 
@@ -66,8 +66,8 @@ namespace Traffic_Lights_V6
         public TrafficLight(int x, int y)
         {
             _redLamp = new Lamp(Color.Red, x, y);
-            _greenLamp = new Lamp(Color.Green, x, y + 50);
-            _amberLamp = new Lamp(Color.Yellow, x, y + 100);
+            _greenLamp = new Lamp(Color.Green, x, y + 100);
+            _amberLamp = new Lamp(Color.Yellow, x, y + 50);
 
             _state = State.Red;
         }
