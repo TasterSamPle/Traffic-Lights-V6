@@ -3,14 +3,16 @@ namespace Traffic_Lights_V6
     public partial class Form1 : Form
     {
         private Lamp _lamp;
-        private SignalBox _signalBox;
+
         private TrafficLight _trafficLight;
+        private TrafficLight2 _trafficLight2;
 
         public Form1()
         {
             _lamp = new Lamp(Color.Red, 10, 10);
-            _signalBox = new SignalBox(110, 10);
+            
             _trafficLight = new TrafficLight(210, 10);
+            _trafficLight2 = new TrafficLight2(420, 10);
 
             InitializeComponent();
         }
@@ -22,7 +24,7 @@ namespace Traffic_Lights_V6
             _lamp.ChangeState();
 
             _trafficLight.ChangeState();
-
+            _trafficLight2.ChangeState();
 
             pb_area.Invalidate();
         }
@@ -34,9 +36,10 @@ namespace Traffic_Lights_V6
             Graphics g = e.Graphics;
 
             // Display all 3 objects
-            _lamp.Display(g);
+  
 
             _trafficLight.Display(g);
+            _trafficLight2.Display(g);
         }
     }
 }
