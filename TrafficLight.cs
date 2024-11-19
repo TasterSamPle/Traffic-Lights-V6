@@ -20,6 +20,7 @@
 
         public void ChangeState()
         {
+
             switch (_state)
             {
                 case State.Red:

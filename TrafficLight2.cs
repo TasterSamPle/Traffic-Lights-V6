@@ -19,6 +19,7 @@ namespace Traffic_Lights_V6
         }
 
 
+
         private Lamp _amberLamp2;
         private Lamp _redLamp2;
         private Lamp _greenLamp2;
@@ -29,6 +30,18 @@ namespace Traffic_Lights_V6
         {
             switch(_state)
             {
+                case State.Green:
+                    _redLamp2.ChangeState(false);
+                    _amberLamp2.ChangeState(false);
+                    _greenLamp2.ChangeState(true);
+                    _state = State.Amber;
+                    break;
+                case State.Amber:
+                    _redLamp2.ChangeState(false);
+                    _amberLamp2.ChangeState(true);
+                    _greenLamp2.ChangeState(false);
+                    _state = State.Red;
+                    break;
                 case State.Red:
                     _redLamp2.ChangeState(true);
                     _amberLamp2.ChangeState(false);
@@ -42,21 +55,6 @@ namespace Traffic_Lights_V6
                     _greenLamp2.ChangeState(false);
                     _state = State.Green;
                     break;
-
-                case State.Green:
-                    _redLamp2.ChangeState(false);
-                    _amberLamp2.ChangeState(false);
-                    _greenLamp2.ChangeState(true);
-                    _state = State.Amber;
-                    break;
-
-                case State.Amber:
-                    _redLamp2.ChangeState(false);
-                    _amberLamp2.ChangeState(true);
-                    _greenLamp2.ChangeState(false);
-                    _state = State.Red;
-                    break;
-                    
 
             }
         }
@@ -73,7 +71,7 @@ namespace Traffic_Lights_V6
             _greenLamp2 = new Lamp(Color.Green, x + 150, y + 100);
             _amberLamp2 = new Lamp(Color.Yellow, x + 150, y + 50);
 
-            _state = State.Red;
+            _state = State.Green;
         }
 
     }
