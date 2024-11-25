@@ -15,11 +15,22 @@ namespace Traffic_Lights_V6
             _trafficLight2 = new TrafficLight2(420, 10);
 
             InitializeComponent();
+
+
         }
 
 
         private void tmr_state_Tick(object sender, EventArgs e)
         {
+            if (tmr_state.Enabled)
+            {
+                Console.WriteLine("timer enabled");
+            }
+            else
+            {
+                Console.WriteLine("timer disabled");
+            }
+
 
             _lamp.ChangeState();
 
