@@ -41,5 +41,15 @@ namespace Traffic_Lights_V6
             _trafficLight.Display(g);
             _trafficLight2.Display(g);
         }
+
+        private void Start_Button_Click(object sender, EventArgs e)
+        {
+            tmr_state.Start();
+        }
+
+        private void Stop_Button_Click(object sender, EventArgs e)
+        {
+            tmr_state.Stop();
+        }
     }
 }
